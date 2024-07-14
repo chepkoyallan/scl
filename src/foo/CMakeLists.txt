@@ -12,7 +12,7 @@ target_link_libraries(
             cxxopts::cxxopts)
 
 if(${ENABLE_WARNINGS})
-    target_set_warnings(
+    target_set_warnings( 
         TARGET
         "LibFoo"
         ENABLE

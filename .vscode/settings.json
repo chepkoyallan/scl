@@ -18,6 +18,8 @@
         "*.hpp.in": "cpp",
         "string": "cpp",
         "chrono": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp"
     }
 }

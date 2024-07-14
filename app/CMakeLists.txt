@@ -6,6 +6,13 @@ target_link_libraries(
     ${EXECUTABLE_NAME}
     PRIVATE "LibFoo"
             "LibBar"
+            "LibClasses"
+            "LibInheritance"
+            "LibEnum"
+            "LibIf"
+            "LibWhile"
+            "LibFor"
+            # "LibStruct"
             nlohmann_json::nlohmann_json
             fmt::fmt
             spdlog::spdlog

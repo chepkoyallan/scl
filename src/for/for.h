@@ -1,0 +1,1 @@
+void for_demo();
