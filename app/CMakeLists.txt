@@ -12,6 +12,7 @@ target_link_libraries(
             "LibIf"
             "LibWhile"
             "LibFor"
+            "LibSwitch"
             # "LibStruct"
             nlohmann_json::nlohmann_json
             fmt::fmt

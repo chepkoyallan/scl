@@ -3,6 +3,7 @@
 #include "for.h"
 #include "if.h"
 #include "inheritance.h"
+#include "switch.h"
 #include "while.h"
 #include <iostream>
 int main()
@@ -62,6 +63,14 @@ int main()
 
     {
         // for_demo();
+    }
+
+    /**
+     * @brief switch demo
+     *
+     */
+    {
+        switch_demo();
     }
 
     return 0;
