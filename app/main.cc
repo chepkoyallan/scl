@@ -2,6 +2,7 @@
 #include "enum.h"
 #include "for.h"
 #include "if.h"
+#include "immediate.h"
 #include "inheritance.h"
 #include "switch.h"
 #include "while.h"
@@ -70,7 +71,16 @@ int main()
      *
      */
     {
-        switch_demo();
+        // switch_demo();
+    }
+
+    /**
+     * @brief immediate demo
+     *
+     */
+
+    {
+        immediate_demo();
     }
 
     return 0;
