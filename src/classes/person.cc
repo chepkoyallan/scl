@@ -58,3 +58,43 @@ void classes_and_inheritance()
         cout << "p2:" << name2 << '\n';
     }
 }
+
+void operator_overloading()
+{
+    Person p1{"kate", "gregory", 34};
+    string p1summary = format("p1: {}, {}", p1.getName(), p1.GetAge());
+    cout << p1summary << '\n';
+
+    Person p2 = p1 + 7;
+    string p2summary = format("p2: {}, {}", p2.getName(), p2.GetAge());
+    cout << p2summary << '\n';
+
+    p1 = 4 + p2;
+
+    p1summary = format("p1: {}, {}", p1.getName(), p1.GetAge());
+    cout << p1summary << '\n';
+
+    // comparing 2 person objects
+    Person someone("someone", "else", 43);
+    string compare = "p1 is";
+
+    if (!(p1 < someone))
+    {
+        compare += "not";
+    }
+    compare += " less than someone";
+    cout << compare << '\n';
+}
+
+
+Person Person::operator+(int i) const
+{
+    return Person(first_name, second_name, age+i);
+}
+
+Person operator+(int i, Person const& p)
+
+{
+//    return Person{p.first_name, p.second_name, i + p.age};
+    return p + i;
+}
