@@ -14,6 +14,7 @@ target_link_libraries(
             "LibFor"
             "LibSwitch"
             "LibImmediate"
+            "LibfreeFreeFunction"
             # "LibStruct"
             nlohmann_json::nlohmann_json
             fmt::fmt

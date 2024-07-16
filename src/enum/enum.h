@@ -16,3 +16,5 @@ enum class NetworkError
     disconnected,
     ok
 };
+
+void enum_demo();

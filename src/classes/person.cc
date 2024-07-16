@@ -1,6 +1,12 @@
 #include "person.h"
+#include "inheritance.h"
+#include <format>
+
 using std::cout;
 using std::string;
+using std::format;
+
+
 
 Person::Person(string first_name, string second_name, int age)
     : first_name(first_name), second_name(second_name), age(age)
@@ -8,7 +14,7 @@ Person::Person(string first_name, string second_name, int age)
     cout << "constructing" << first_name << " " << second_name << '\n';
 }
 
-string Person::getName()
+string Person::getName() const
 {
     return first_name + " " + second_name;
 }
@@ -16,4 +22,39 @@ string Person::getName()
 Person::~Person()
 {
     cout << "destructing: " << first_name << " " << second_name << '\n';
+}
+
+// const member function
+
+string summary(string id, Person const& p)
+{
+    return format("{}, {} {}", id, p.getName(), p.GetAge());
+};
+
+
+void const_member_function()
+{
+    {
+        Person p1{"allan", "ryan", 23};
+
+        string p1Summary = summary("p1", p1);
+
+        p1.SetNumber(34);
+
+        summary("p1", p1);
+    }
+
+}
+
+void classes_and_inheritance()
+{
+    {
+        Person p2{"kip", "oba", 24};
+        {
+            Tweeter t1("allan2", "c", 34, "@allan");
+            string name2 = t1.getName();
+        }
+        string name2 = p2.getName();
+        cout << "p2:" << name2 << '\n';
+    }
 }
